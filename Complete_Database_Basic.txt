@@ -1,0 +1,82 @@
+   For  Create new Table
+***************/\********************
+   select * from [MyData]
+   Data Look Like This
+***
+   Roll	name	lname	college	city	dist
+   49	Mayur	Adlak	OIST	Hydrabad	Indore
+   166	Om	Adlak	IIST	Indore	Betul
+   166	Om	Adlak	IIST	Indore	Betul
+   96	Vishal	Chouhan	OIST	Jirapur	Rajgadh
+   46	Mahendra	Gawande	OIST	Banguluru	Betul
+   12	Mahendra	Lokhande	MSH	Indore	dist
+   12	Mahendra	Lokhande	MSH	Indore	dist
+   12	Mahendra	Lokhande	MSH	Indore	dist
+   12	Mahendra	Lokhande	MSH	Indore	dist
+   12	Mahendra	Lokhande	MSH	Indore	dist  ***
+
+ *********************/\***************************
+Data Defination Language Command
+
+insert into MyData(Roll,name,lname,college,city,dist)
+values(100,"Lucky","Adlak","OIST","Nagpur","Chhindwara")
+
+********************/\******************
+Order by for sort the particular column
+select Rollno from Student order by ROll
+
+***********************
+For Delete any table data
+delete from MyData where name="Mayur"
+-- Another Example --
+delete from Dataset
+where name ="Sourabh";
+
+****************Distinct Statement
+select distinct (name) from MyData
+****/\**************
+Function in SQL
+1 avg()=Average select ang(colunm name ) from table name;
+2 Count()=select count (column name) from table name;
+3.lcase()=select lcase(column name) from tablebame ;
+4.Max()=select max(column name) from table name;
+5.Min()=select min(column name) from table name;
+6.Sum()=select Sum(column name) from table name
+7.Round()=select Round(column name) from table name;
+8.substring()=is used to get part of a string
+9.ucase()=select ucase(column name) from table name;
+10. replace ()=select replace (coulnm name "Mayur ", "Om") from Orders;
+
+*******************/\************************
+Group By Function
+select  Roll(100) from MyData
+select name,sum(fees) from Dataset group by name;
+name	sum(fees)
+Mayur	220
+Rohit	190
+Sourabh	160
+Vishal
+!!!!!!!!!!!!!!!!!!!!!!most important having clause
+select name,sum(roll) from MyData
+group by name having sum(roll)>100;
+
+************** ---
+alias
+use for change column name :
+select name as myname from MyData
+----------------- Drop command
+drop table table_name
+
+-------------------Between Command
+select * from Dataset where fees between 80 and 120
+----------------**----------------------------
+in->Command is use for Selct any Particular data
+select * from Dataset where name in("Sourabh","Vishal");
+
+------------ Like Operator --------------
+select *from Student
+where Depart like "C%";  // return all Depart which start from C later
+
+----------------**----------------------
+Primary key in Database is very Important Concept in Database
+Primary key unique+not null
